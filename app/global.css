@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --bg-main: hsl(217, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+body {
+    background-color: var(--bg-main);
+    font-family: "Outfit", sans-serif;
+    color: var(--soft-blue);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.card-container {
+    background-color: var(--bg-card);
+    width: min(87.5%, 20rem);
+    margin: 9.5rem auto;
+    border-radius: 15px;
+    padding: 1.5rem 1.6rem 2rem;
+}
+
+.card-image {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+.image-main {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: var(--cyan);
+    border-radius: 10px;
+}
+
+.image-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+
+.card-image:hover .image-overlay {
+    opacity: 0.1;
+    cursor: pointer;
+}
+
+.card-image:hover .image-view {
+    display: block;
+}
+
+.text-container {
+    margin-bottom: 1.25rem;
+}
+
+.text-title {
+    color: var(--white);
+    margin: 1rem 0 0.5rem;
+    font-weight: 600;
+}
+
+.text-title:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.text-body {
+    font-size: 1rem;
+    letter-spacing: 0.015em;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.text-info-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-price {
+    display: flex;
+    align-items: center;
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.text-date {
+    display: flex;
+    align-items: center;
+}
+
+.text-eth-icon {
+    margin-right: 0.5rem;
+}
+
+.text-date-icon {
+    margin-right: 0.5rem;
+}
+
+.creator-container {
+    display: flex;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+    align-items: center;
+}
+
+.creator-avatar {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    width: 2rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.creator-name {
+    color: var(--white);
+}
+
+.creator-name:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+  
